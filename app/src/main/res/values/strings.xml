@@ -3,4 +3,9 @@
   <string name="title_item_detail">Item Detail</string>
   <string name="launch_patch_image">Launch Patch Image</string>
   <string name="flight_details">Flight Details</string>
+  <string name="mission_description_placeholder">Mission Description</string>
+  <string name="mission_name_placeholder">Mission Name</string>
+  <string name="mission_patch_image">Mission Patch Image</string>
+  <string name="location_text_placeholder">Kwaja Island</string>
+  <string name="location_text_long_placeholder">Kwajalein Atoll Omelek Island</string>
 </resources>
