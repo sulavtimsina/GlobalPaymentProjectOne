@@ -4,20 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ad.primarydetailflow.ItemDetailFragment
-import com.ad.primarydetailflow.ItemListFragmentDirections
 import com.ad.primarydetailflow.R
-import com.ad.primarydetailflow.data.model.LaunchDetailData
-import com.bumptech.glide.Glide
 import com.ad.primarydetailflow.data.model.LaunchItem
-import com.ad.primarydetailflow.data.model.Telemetry
 import com.ad.primarydetailflow.databinding.ItemListContentBinding
-import com.ad.primarydetailflow.ui.interfaces.ItemClickListener
-import java.text.SimpleDateFormat
-import java.util.*
+import com.bumptech.glide.Glide
 
 class RocketLaunchAdapter(private val itemDetailNavContainer: View?) :
   RecyclerView.Adapter<RocketLaunchAdapter.ViewHolder>() {
@@ -57,7 +50,6 @@ class RocketLaunchAdapter(private val itemDetailNavContainer: View?) :
     binding.tvRocketName.text = launchDetailItem.rocketName
     binding.launchDate.text = launchDetailItem.launchYear
     binding.siteName.text = launchDetailItem.siteName
-      // SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).format(launchDetailItem.launchYear)
 
     Glide.with(holder.itemView.context).load(launchDetailItem.missionPatchUrl)
       .into(binding.ivThumbnail)

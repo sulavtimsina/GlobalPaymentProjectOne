@@ -5,12 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.navArgs
 import com.ad.primarydetailflow.data.model.LaunchDetailData
-import com.ad.primarydetailflow.data.model.LaunchItem
 import com.ad.primarydetailflow.databinding.FragmentItemDetailBinding
 import com.bumptech.glide.Glide
 
@@ -18,8 +15,6 @@ class ItemDetailFragment : Fragment() {
 
   private var _binding: FragmentItemDetailBinding? = null
   private val binding get() = _binding!!
-
-  private val args: ItemDetailFragmentArgs by navArgs()
 
   @RequiresApi(Build.VERSION_CODES.TIRAMISU)
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,12 +39,10 @@ class ItemDetailFragment : Fragment() {
           binding.missionDescription.visibility = View.GONE
         }
         binding.locationText.text = "Location: " + a?.siteName
-        binding.locationTextLong?.text = a?.siteNameLong
+        binding.locationTextLong.text = a?.siteNameLong
         binding.rocketName.text = a?.rocketName
-
       }
     }
-
     return binding.root
   }
 
