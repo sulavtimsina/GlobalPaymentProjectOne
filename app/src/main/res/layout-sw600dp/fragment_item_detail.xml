@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/top_card_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/spacex_margin_small"
+      android:layout_marginBottom="@dimen/spacex_margin_small"
+      android:layout_marginStart="@dimen/spacex_margin_small"
+      android:layout_marginEnd="@dimen/spacex_margin_small"
+      app:cardCornerRadius="@dimen/spacex_margin_small"
+      app:cardElevation="@dimen/spacex_card_elevation_small"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0F7FA"
+        android:layout_margin="@dimen/spacex_margin_small"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/launchThumbnail"
+          android:layout_width="@dimen/spacex_detail_thumbnail_size"
+          android:layout_height="@dimen/spacex_detail_thumbnail_size"
+          android:layout_marginTop="30dp"
+          android:layout_gravity="center_horizontal"
+          app:srcCompat="@drawable/ic_launcher_background"
+          tools:srcCompat="@drawable/ic_rocket_grey_24dp" />
+
+      <TextView
+          android:id="@+id/missionName"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/spacex_detail_top_margin"
+          android:layout_marginTop="@dimen/spacex_detail_top_margin"
+          android:layout_gravity="center_horizontal"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/spacex_text_size_large"
+          tools:text="Mission Name" />
+
+      <TextView
+          android:id="@+id/missionDescription"
+          android:layout_width="wrap_content"
+          android:maxLines="2"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:layout_marginEnd="4dp"
+          style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+          android:textColor="@color/black"
+          android:layout_marginBottom="@dimen/spacex_detail_top_margin"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textSize="@dimen/spacex_text_size_medium"
+          tools:text="Mission Description" />
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/mid_card_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="#E0F7FA"
+      android:layout_marginTop="@dimen/spacex_margin_small"
+      android:layout_marginBottom="@dimen/spacex_margin_small"
+      android:layout_marginStart="@dimen/spacex_margin_small"
+      android:layout_marginEnd="@dimen/spacex_margin_small"
+      app:cardCornerRadius="@dimen/spacex_margin_small"
+      app:cardElevation="@dimen/spacex_margin_very_small"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/top_card_view">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacex_margin_large"
+        android:orientation="vertical">
+
+<!--      <ImageView-->
+<!--          android:id="@+id/locationView"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_marginTop="@dimen/spacex_margin_large"-->
+<!--          android:layout_marginBottom="@dimen/spacex_margin_small"-->
+<!--          android:layout_marginStart="@dimen/spacex_margin_small"-->
+<!--          android:layout_marginEnd="@dimen/spacex_margin_small"-->
+<!--          app:layout_constraintBottom_toBottomOf="parent"-->
+<!--          app:layout_constraintEnd_toEndOf="parent"-->
+<!--          app:layout_constraintHorizontal_bias="0.025"-->
+<!--          app:layout_constraintStart_toStartOf="parent"-->
+<!--          app:layout_constraintTop_toBottomOf="@+id/label"-->
+<!--          app:layout_constraintVertical_bias="0.04"-->
+<!--          app:srcCompat="@drawable/ic_rocket_grey_24dp"-->
+<!--          tools:srcCompat="@drawable/ic_rocket_grey_24dp" />-->
+
+<!--      <ImageView-->
+<!--          android:id="@+id/rocketView"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_marginTop="@dimen/spacex_margin_medium"-->
+<!--          android:layout_marginBottom="@dimen/spacex_margin_small"-->
+<!--          android:layout_marginStart="@dimen/spacex_margin_small"-->
+<!--          android:layout_marginEnd="@dimen/spacex_margin_small"-->
+<!--          app:layout_constraintBottom_toBottomOf="parent"-->
+<!--          app:layout_constraintEnd_toEndOf="parent"-->
+<!--          app:layout_constraintHorizontal_bias="0.025"-->
+<!--          app:layout_constraintStart_toStartOf="parent"-->
+<!--          app:layout_constraintTop_toBottomOf="@id/locationText"-->
+<!--          app:layout_constraintVertical_bias="0.033"-->
+<!--          app:srcCompat="@drawable/ic_rocket_grey_24dp" />-->
+
+      <TextView
+          android:id="@+id/locationText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/spacex_margin_small"
+          android:drawablePadding="10dp"
+          android:drawableStart="@drawable/ic_rocket_grey_24dp"
+          android:textSize="@dimen/spacex_text_size_medium"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/label"
+          tools:text="Kwaja Island" />
+
+      <TextView
+          android:id="@+id/locationTextLong"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/spacex_margin_small"
+          android:drawablePadding="10dp"
+          android:drawableStart="@drawable/ic_rocket_grey_24dp"
+          android:textSize="@dimen/spacex_text_size_medium"
+          app:layout_constraintTop_toBottomOf="@id/label"
+          app:layout_constraintEnd_toEndOf="parent"
+          tools:text="Kwaja Island" />
+
+      <TextView
+          android:id="@+id/label"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/spacex_text_size_large"
+          android:gravity="center_horizontal"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:text="@string/flight_details" />
+
+      <TextView
+          android:id="@+id/rocketName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/spacex_margin_small"
+          android:textSize="@dimen/spacex_text_size_medium"
+          android:drawablePadding="10dp"
+          android:drawableStart="@drawable/ic_rocket_grey_24dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/locationText"
+          tools:text="Falcon 1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
