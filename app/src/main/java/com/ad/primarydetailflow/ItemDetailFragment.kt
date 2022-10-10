@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.ad.primarydetailflow.data.model.LaunchDetailData
 import com.ad.primarydetailflow.databinding.FragmentItemDetailBinding
@@ -30,6 +31,7 @@ class ItemDetailFragment : Fragment() {
     arguments?.let {
       if (it.containsKey(ARG_ITEM_ID)) {
         val a = it.getParcelable<LaunchDetailData>(ARG_ITEM_ID)
+        (context as AppCompatActivity).supportActionBar?.title = a?.missionName
         binding.missionName.text = a?.missionName
         Glide.with(requireContext()).load(a?.missionPatchUrl)
           .into(binding.launchThumbnail)
